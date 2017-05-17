@@ -2,12 +2,9 @@
     <string name="app_name">Natura App</string>
 
     <string-array name="menuLateral">
-        <item>Home</item>
-        <item>Alterar Perfil</item>
+        <item>Perfil</item>
         <item>Comprar produtos</item>
-        <item>Devolver embalagens</item>
-        <item>Procurar Ecoboxes</item>
-        <item>Listar produtos</item>
+        <item>Retornar embalagens</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

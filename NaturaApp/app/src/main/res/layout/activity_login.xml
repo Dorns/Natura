@@ -10,14 +10,77 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.fiap.naturaapp.LoginActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logonatura"
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:id="@+id/btnLoin"
+    <EditText
+        android:id="@+id/edtLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Usuário"
+        android:focusable="true"
+        android:textColorHint="#CD853F"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/edtLogin"
+        android:textColorHint="#CD853F"
+        android:hint="Senha" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSenha"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="40dp"
         android:text="Login"
         android:onClick="login"/>
 
 
+    <Button
+        android:id="@+id/btnFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login with Facebook Account"
+        android:background="#4682B4"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/btnLogin"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_below="@+id/btnFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login with Google Account"
+        android:background="#CD0000"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Novo usuário? Cadastre-se"
+        android:layout_below="@id/btnGoogle"
+        android:layout_marginTop="17dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:onClick="cadastrar"/>
 
 </RelativeLayout>
