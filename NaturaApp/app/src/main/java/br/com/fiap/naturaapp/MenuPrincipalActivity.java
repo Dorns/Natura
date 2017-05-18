@@ -16,33 +16,33 @@ import layout.PerfilUsuarioFragment;
 
 public class MenuPrincipalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
-   // private FrameLayout frame;
     private ListView lstMenu;
-    private LinearLayout DrawerLinear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
-
-    //    frame = (FrameLayout) findViewById(R.id.frame);
         lstMenu = (ListView) findViewById(R.id.lstMenu);
         lstMenu.setOnItemClickListener(this);
         mostrarPerfil();
     }
 
-    public void PerfilUsuario(View v){
+    public void Perfil(View v){
         mostrarPerfil();
     }
+
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
-        Log.i("dasdasdokasopdkasop", "onItemClick: apsdkasopdkasopdkasop");
-
-        ((DrawerLayout) findViewById(R.id.activity_menu_principal)).closeDrawer(lstMenu);
-
+        if (position == 0) {
+            mostrarPerfil();
+        } else if (position == 1) {
+            mostrarPerfil();
+        } else {
+            finish();
+        }
+        ((DrawerLayout) findViewById(R.id.activity_menu_principal)).closeDrawers();
     }
 
     public void mostrarPerfil(){
