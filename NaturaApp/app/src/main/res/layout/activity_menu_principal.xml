@@ -33,10 +33,10 @@
             android:id="@+id/lstMenu"
             android:layout_width="240dp"
             android:layout_height="match_parent"
-            android:entries="@array/menuLateral"
             android:background="#3f51b5"
             android:divider="#000000"
             android:dividerHeight="3dp"  />
+
 
     </LinearLayout>
 
