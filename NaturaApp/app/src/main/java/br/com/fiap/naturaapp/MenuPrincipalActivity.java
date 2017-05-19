@@ -15,6 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import layout.ComprarFragment;
 import layout.PerfilUsuarioFragment;
 
 public class MenuPrincipalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
@@ -45,7 +46,7 @@ public class MenuPrincipalActivity extends AppCompatActivity implements AdapterV
         if (position == 0) {
             mostrarPerfil();
         } else if (position == 1) {
-            mostrarPerfil();
+            comprar();
         } else {
             finish();
         }
@@ -58,5 +59,16 @@ public class MenuPrincipalActivity extends AppCompatActivity implements AdapterV
         t.replace(R.id.frame, new PerfilUsuarioFragment());
         t.commit();
     }
+
+    public void comprar(){
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction t = fm.beginTransaction();
+        t.replace(R.id.frame, new ComprarFragment());
+        t.commit();
+    }
+
+
+
+
 
 }
