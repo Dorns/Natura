@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.ComprarFragment">
+    tools:context="layout.RetornarEmbalagemFragment">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -61,28 +61,13 @@
                         android:text="Conteúdo: 75 ml "
                         android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/txtValor1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Valor: R$ 198,90 "
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/txtPontos1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Pontos: 300" />
-
                     <Button
                         android:id="@+id/btnComprar1"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:layout_margin="4dp"
                         android:background="#000000"
-                        android:text="Comprar"
+                        android:text="Credito em Pontos: 40"
                         android:textColor="#FFFFFF" />
 
                 </LinearLayout>
@@ -128,27 +113,13 @@
                         android:layout_margin="4dp"
                         android:text="Conteúdo: 100 ml " />
 
-                    <TextView
-                        android:id="@+id/txtValor2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Valor: R$ 88,90 " />
-
-                    <TextView
-                        android:id="@+id/txtPontos2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Pontos: 280" />
-
                     <Button
                         android:id="@+id/btnComprar2"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:layout_margin="4dp"
                         android:background="#000000"
-                        android:text="Comprar"
+                        android:text="Credito em Pontos: 65"
                         android:textColor="#FFFFFF" />
 
                 </LinearLayout>
@@ -194,29 +165,14 @@
                         android:layout_margin="4dp"
                         android:text="Conteúdo: 3,5g " />
 
-                    <TextView
-                        android:id="@+id/txtValor3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Valor: R$ 12,50 " />
-
-                    <TextView
-                        android:id="@+id/txtPontos3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Pontos: 500 " />
-
                     <Button
                         android:id="@+id/btnComprar3"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:layout_margin="4dp"
                         android:background="#000000"
-                        android:text="Comprar"
+                        android:text="Credito em Pontos: 80"
                         android:textColor="#FFFFFF" />
-                    />
 
                 </LinearLayout>
             </LinearLayout>
@@ -261,27 +217,13 @@
                         android:layout_margin="4dp"
                         android:text="Conteúdo: 3,5g " />
 
-                    <TextView
-                        android:id="@+id/txtValor4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Valor: R$ 29,90 " />
-
-                    <TextView
-                        android:id="@+id/txtPontos4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Pontos: 150 " />
-
                     <Button
                         android:id="@+id/btnComprar4"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:layout_margin="4dp"
                         android:background="#000000"
-                        android:text="Comprar"
+                        android:text="Credito em Pontos: 25"
                         android:textColor="#FFFFFF" />
 
                 </LinearLayout>
@@ -327,21 +269,6 @@
                         android:layout_margin="4dp"
                         android:text="Conteúdo: 5g " />
 
-                    <TextView
-                        android:id="@+id/TextView24"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Valor: R$ 48,90 " />
-
-                    <TextView
-                        android:id="@+id/txtPontos5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:text="Pontos: 120 " />
-
-
                     <Button
                         android:id="@+id/btnComprar5"
                         android:layout_width="match_parent"
@@ -349,10 +276,9 @@
                         android:layout_margin="4dp"
                         android:background="#000000"
                         android:textColor="#FFFFFF"
-                        android:text="Comprar"/>
+                        android:text="Credito em Pontos: 54"/>
 
                 </LinearLayout>
-
             </LinearLayout>
 
         </RelativeLayout>

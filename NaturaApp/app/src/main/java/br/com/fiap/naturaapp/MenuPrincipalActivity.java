@@ -17,6 +17,7 @@ import android.widget.ListView;
 
 import layout.ComprarFragment;
 import layout.PerfilUsuarioFragment;
+import layout.RetornarEmbalagemFragment;
 
 public class MenuPrincipalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -35,11 +36,6 @@ public class MenuPrincipalActivity extends AppCompatActivity implements AdapterV
         mostrarPerfil();
     }
 
-    public void Perfil(View v){
-        mostrarPerfil();
-    }
-
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -47,7 +43,9 @@ public class MenuPrincipalActivity extends AppCompatActivity implements AdapterV
             mostrarPerfil();
         } else if (position == 1) {
             comprar();
-        } else {
+        } else if (position == 2) {
+            retornarEmbalagem();
+        }else{
             finish();
         }
         ((DrawerLayout) findViewById(R.id.activity_menu_principal)).closeDrawers();
@@ -67,8 +65,11 @@ public class MenuPrincipalActivity extends AppCompatActivity implements AdapterV
         t.commit();
     }
 
-
-
-
+    public void retornarEmbalagem(){
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction t = fm.beginTransaction();
+        t.replace(R.id.frame, new RetornarEmbalagemFragment());
+        t.commit();
+    }
 
 }
