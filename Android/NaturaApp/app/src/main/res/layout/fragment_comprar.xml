@@ -1,0 +1,360 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.ComprarFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".MenuPrincipalActivity">
+
+
+            <LinearLayout
+                android:id="@+id/lnlProduto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/perfumeuna"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/naturauna" />
+
+                <LinearLayout
+                    android:id="@+id/lnlSubProduto1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNome1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Natura Una"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtConteudo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Conteúdo: 75 ml "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtValor1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Valor: R$ 198,90 "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtPontos1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Pontos: 300" />
+
+                    <Button
+                        android:id="@+id/btnComprar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:background="#000000"
+                        android:text="Comprar"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlProduto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnlProduto1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgKaiak"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/kaiak" />
+
+                <LinearLayout
+                    android:id="@+id/lnlSubProduto2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNome2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Natura Kaiak"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtConteudo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Conteúdo: 100 ml " />
+
+                    <TextView
+                        android:id="@+id/txtValor2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Valor: R$ 88,90 " />
+
+                    <TextView
+                        android:id="@+id/txtPontos2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Pontos: 280" />
+
+                    <Button
+                        android:id="@+id/btnComprar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:background="#000000"
+                        android:text="Comprar"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlProduto3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnlProduto2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/batom"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/batom" />
+
+                <LinearLayout
+                    android:id="@+id/lnlSubProduto3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TextNome3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Batom Mate Vermelho"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtContudo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Conteúdo: 3,5g " />
+
+                    <TextView
+                        android:id="@+id/txtValor3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Valor: R$ 12,50 " />
+
+                    <TextView
+                        android:id="@+id/txtPontos3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Pontos: 500 " />
+
+                    <Button
+                        android:id="@+id/btnComprar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:background="#000000"
+                        android:text="Comprar"
+                        android:textColor="#FFFFFF" />
+                    />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlProduto4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnlProduto3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgSombra"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/sombra" />
+
+                <LinearLayout
+                    android:id="@+id/lnlsubProduto4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNome4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Sombra Mono Aquarela"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtConteudo4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Conteúdo: 3,5g " />
+
+                    <TextView
+                        android:id="@+id/txtValor4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Valor: R$ 29,90 " />
+
+                    <TextView
+                        android:id="@+id/txtPontos4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Pontos: 150 " />
+
+                    <Button
+                        android:id="@+id/btnComprar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:background="#000000"
+                        android:text="Comprar"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnlProduto5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/lnlProduto4">
+
+                <ImageView
+                    android:id="@+id/po"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/po" />
+
+                <LinearLayout
+                    android:id="@+id/lnlsubProduto5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNome5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textSize="18sp"
+                        android:text="Pó Iluminador Marmorizado" />
+
+                    <TextView
+                        android:id="@+id/TextView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Conteúdo: 5g " />
+
+                    <TextView
+                        android:id="@+id/TextView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Valor: R$ 48,90 " />
+
+                    <TextView
+                        android:id="@+id/txtPontos5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Pontos: 120 " />
+
+
+                    <Button
+                        android:id="@+id/btnComprar5"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:background="#000000"
+                        android:textColor="#FFFFFF"
+                        android:text="Comprar"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
