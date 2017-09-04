@@ -11,11 +11,18 @@
         android:hint="Digite o código de confirmação de compra"
         android:layout_marginTop="10dp"/>
 
+    <ImageView
+        android:id="@+id/imgProduto"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edtCodigo" />
+
     <Button
         android:id="@+id/btnConfirmar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtCodigo"
+        android:layout_below="@+id/imgProduto"
         android:text="Confirmar"
         android:onClick="confirmar"/>
 

@@ -12,9 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.zxing.Result;
-
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 
@@ -40,12 +38,9 @@ public class ReciclarActivity extends AppCompatActivity implements ZXingScannerV
             ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CAMERA,
             }, 0);
         }
-
-
     }
 
     public void scanQR (View v){
-
         mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view<br />
         setContentView(mScannerView);
         mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.<br />
@@ -55,7 +50,7 @@ public class ReciclarActivity extends AppCompatActivity implements ZXingScannerV
     @Override
     public void handleResult(Result result) {
 
-        // Do something with the result here</p>
+        // Do something with the result here
         Log.e("", result.getText()); // Prints scan results
         Log.e("", result.getBarcodeFormat().toString()); // Prints the scan format (qrcode)
        // show the scanner result into dialog box.
