@@ -1,26 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorbackground"
+    >
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/logo2" />
 
 
-    <Button
-        android:layout_margin="40dp"
-        android:id="@+id/btnComprar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="comprar"
-        android:text="Comprar"/>
+    <LinearLayout
+        android:id="@+id/btnLL"
+        android:layout_below="@id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/btnComprar"
+            android:src="@drawable/comprar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:onClick="comprar"/>
 
-    <Button
-        android:layout_margin="40dp"
-        android:id="@+id/btnReciclar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/btnComprar"
-        android:onClick="reciclar"
-        android:text="Reciclar"/>
+        <ImageView
+            android:id="@+id/btnReciclar"
+            android:src="@drawable/reciclar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:onClick="reciclar"/>
+    </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_below="@id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Comprar"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:text="Reciclar" />
+    </LinearLayout>
 
 
 </RelativeLayout>
