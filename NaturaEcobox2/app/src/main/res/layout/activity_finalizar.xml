@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground">
+
+    <ImageView
+        android:id="@+id/imgVendingMachine"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/vendingmachine"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtRetirarCompra"
+        android:textColor="#FFFFFF"
+        android:text="Retire seu produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:layout_below="@id/imgVendingMachine" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FINALIZAR"
+        android:layout_below="@id/txtRetirarCompra"
+        android:layout_marginTop="20dp"
+        android:background="#22b14c"
+        android:textColor="#000000"/>
+
+</RelativeLayout>

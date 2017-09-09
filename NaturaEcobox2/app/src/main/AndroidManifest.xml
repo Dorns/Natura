@@ -21,7 +21,7 @@
                 android:value="barcode" />
         </activity>
         <activity android:name=".ComprarActivity" />
-        <activity android:name=".FinalizarCompra" />
+        <activity android:name=".FinalizarActivity" />
         <activity android:name=".ReciclarActivity"></activity>
     </application>
 

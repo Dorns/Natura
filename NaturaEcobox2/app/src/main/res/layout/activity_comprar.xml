@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground" >
 
 
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/logo2"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/edtCodigo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="text"
         android:hint="Digite o código de confirmação de compra"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/img"
+        android:imeOptions="actionDone"
         android:layout_marginTop="10dp"/>
-
-    <ImageView
-        android:id="@+id/imgProduto"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/edtCodigo" />
 
     <Button
         android:id="@+id/btnConfirmar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgProduto"
-        android:text="Confirmar"
+        android:layout_below="@+id/edtCodigo"
+        android:text="Confirmar Retirada"
+        android:background="#22b14c"
+        android:textColor="#000000"
+        android:visibility="invisible"
         android:onClick="confirmar"/>
-
 
 </RelativeLayout>

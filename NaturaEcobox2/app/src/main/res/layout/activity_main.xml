@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorbackground"
-    >
+    android:background="@color/colorbackground" >
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -19,14 +18,15 @@
         android:layout_height="match_parent"
         android:layout_margin="20dp"
         android:layout_alignParentBottom="true">
+
         <ImageView
             android:id="@+id/btnComprar"
-            android:src="@drawable/comprar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="10dp"
-            android:onClick="comprar"/>
+            android:layout_weight="1"
+            android:onClick="comprar"
+            android:src="@drawable/comprar" />
 
         <ImageView
             android:id="@+id/btnReciclar"
@@ -52,7 +52,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Comprar"
+            android:text="Retirar"
             android:textSize="20dp"
             android:textColor="#FFFFFF" />
 
