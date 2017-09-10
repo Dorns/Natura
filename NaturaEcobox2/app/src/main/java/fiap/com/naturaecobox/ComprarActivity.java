@@ -62,7 +62,10 @@ public class ComprarActivity extends AppCompatActivity {
 
     public void confirmar (View v){
         Intent i = new Intent(this,FinalizarActivity.class);
+        i.putExtra("acao","comprar");
+        i.putExtra("msg","Retire seu produto");
         startActivity(i);
+
 
     }
 }

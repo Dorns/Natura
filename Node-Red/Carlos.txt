@@ -1,0 +1,287 @@
+[
+    {
+        "id": "c581e9a8.31e128",
+        "type": "tab",
+        "label": "Teste Cliente Web",
+        "disabled": false
+    },
+    {
+        "id": "7e5916f0.2067a8",
+        "type": "tab",
+        "label": "Teste Inject"
+    },
+    {
+        "id": "3ef4251c.0f92fa",
+        "type": "tab",
+        "label": "Aplicação WEB"
+    },
+    {
+        "id": "bb45ca6a.dd4358",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "bdb57f70.8f8c",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "fbe72d86.ee08",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "eca85ec5.73ccd",
+        "type": "inject",
+        "z": "c581e9a8.31e128",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "9ccbd367.9d4d4"
+            ]
+        ]
+    },
+    {
+        "id": "9ccbd367.9d4d4",
+        "type": "http request",
+        "z": "c581e9a8.31e128",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://127.0.0.1:1880/luz",
+        "tls": "",
+        "x": 299,
+        "y": 131,
+        "wires": [
+            [
+                "603a3a64.974e34"
+            ]
+        ]
+    },
+    {
+        "id": "603a3a64.974e34",
+        "type": "debug",
+        "z": "c581e9a8.31e128",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 460,
+        "y": 210,
+        "wires": []
+    },
+    {
+        "id": "515a9711.6eb278",
+        "type": "inject",
+        "z": "c581e9a8.31e128",
+        "name": "",
+        "topic": "",
+        "payload": "{\"value\":0}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "e8edac74.c4d1c"
+            ]
+        ]
+    },
+    {
+        "id": "e8edac74.c4d1c",
+        "type": "http request",
+        "z": "c581e9a8.31e128",
+        "name": "",
+        "method": "PUT",
+        "ret": "txt",
+        "url": "http://127.0.0.1:1880/led",
+        "tls": "",
+        "x": 305,
+        "y": 338,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e9f56f9.eb6efa",
+        "type": "mqtt out",
+        "z": "7e5916f0.2067a8",
+        "name": "",
+        "topic": "naturaecobox/box01",
+        "qos": "1",
+        "retain": "",
+        "broker": "bb45ca6a.dd4358",
+        "x": 302,
+        "y": 109,
+        "wires": []
+    },
+    {
+        "id": "6bdb0be4.ca6e84",
+        "type": "inject",
+        "z": "7e5916f0.2067a8",
+        "name": "",
+        "topic": "",
+        "payload": "100",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 105,
+        "y": 56,
+        "wires": [
+            [
+                "3e9f56f9.eb6efa"
+            ]
+        ]
+    },
+    {
+        "id": "d8422a44.386488",
+        "type": "http response",
+        "z": "3ef4251c.0f92fa",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "668f850a.0d1d3c",
+        "type": "mqtt out",
+        "z": "3ef4251c.0f92fa",
+        "name": "",
+        "topic": "naturaecobox/box01",
+        "qos": "1",
+        "retain": "",
+        "broker": "bb45ca6a.dd4358",
+        "x": 340,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f2eebe6c.729c8",
+        "type": "mqtt in",
+        "z": "7e5916f0.2067a8",
+        "name": "",
+        "topic": "naturaecobox/box01",
+        "qos": "0",
+        "broker": "bb45ca6a.dd4358",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "d1a089af.d2ff48"
+            ]
+        ]
+    },
+    {
+        "id": "d1a089af.d2ff48",
+        "type": "debug",
+        "z": "7e5916f0.2067a8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 450,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1b24ef7f.da7ab1",
+        "type": "inject",
+        "z": "c581e9a8.31e128",
+        "name": "",
+        "topic": "",
+        "payload": "{\"value\":200}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "e8edac74.c4d1c"
+            ]
+        ]
+    },
+    {
+        "id": "cc4f399d.c25018",
+        "type": "http in",
+        "z": "3ef4251c.0f92fa",
+        "name": "",
+        "url": "/natura",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "668f850a.0d1d3c",
+                "d8422a44.386488"
+            ]
+        ]
+    },
+    {
+        "id": "dfd0ea92.0b0938",
+        "type": "debug",
+        "z": "3ef4251c.0f92fa",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 330,
+        "y": 480,
+        "wires": []
+    }
+]
