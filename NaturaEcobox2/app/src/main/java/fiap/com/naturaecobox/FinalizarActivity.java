@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -29,6 +30,10 @@ public class FinalizarActivity extends AppCompatActivity implements Response.Lis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Remove o statusbar , tem q ficar em primeiro
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         txtMensagem = (TextView) findViewById(R.id.txtMensagem);
 
         //Recupera informações da activity
@@ -36,21 +41,21 @@ public class FinalizarActivity extends AppCompatActivity implements Response.Lis
         String msg = param.getString("msg");
         String acao = param.getString("acao");
 
+        Log.i("","mssa:"+msg);
+
         //Atribui os valores para mensagem e URL JSON
-        txtMensagem.setText(msg);
 
-
-        //Remove o statusbar
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) !=
                 PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.INTERNET,
             }, 0);
         }
-        enviaReq(acao);
+        enviaReq("acaodasdasda");
     }
+
+
+
 
     public void enviaReq(String acao){
 
@@ -68,6 +73,10 @@ public class FinalizarActivity extends AppCompatActivity implements Response.Lis
         reqQueue.add(jsonReq);
         setContentView(R.layout.activity_finalizar);
 
+    }
+
+    public void finalizar(View v){
+        txtMensagem.set;
     }
 
     @Override

@@ -44,8 +44,6 @@ public class ComprarActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     private void buscarProduto() {
